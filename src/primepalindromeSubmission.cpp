@@ -1,4 +1,4 @@
-#include <iostream>
+/*#include <iostream>
 #include <vector>
 #include <math.h>
 
@@ -14,7 +14,7 @@ int main()
     while(keepGoing)
     {
         int n = 0;
-        cout << "Enter integer greater than 1" << endl;
+    	cout << "Enter integer greater than 1" << endl;
         cin >> n;
         int condition = 1;
         while (condition)
@@ -24,7 +24,7 @@ int main()
                 cout << n << endl;
                 condition = 0;
             }
-            n += 1;
+           	n += 1;
         }
         cout << "keep going? 1/0" << endl;
         cin >> keepGoing;
@@ -34,8 +34,8 @@ int main()
 
 bool isPrime(int number)
 {
-    int number2 = sqrt(number);
-    for (int i = 2; i < number2; i++)
+    int number2 = number;
+    for (int i = 2; i <= number2; i++)
         {
             if (!(number2 % i))
             {
@@ -49,17 +49,19 @@ bool isPalindrome(int number)
 {
     int newNumber = number;
     vector<int> newVector;
+    int counter = 0;
     while(number/10)
     {
         newVector.push_back(number%10);
         number = number/10;
+        counter++;
     }
 
 //add loop to convert newVector into one integer...then use next
-//if conditinoal to compare new integer to original number
+//if conditional to compare new integer to original number
     int ans = 0;
 
-    for (int i = 0; i < newVector.size(); i++)
+    for (int i = 0; i <= counter; i++)
     {
         ans += newVector[i] * power(i);
     }
@@ -88,3 +90,5 @@ int power(int x)
     }
 
 }
+
+*/
